@@ -82,7 +82,9 @@ export interface IReplyToMessage extends IText {
   messageId: string;
 }
 
-export type SendText = (options: IRecipient & IText) => Promise<Response>;
+export type SendPayload<T> = (options: T) => Promise<Response>;
+
+export type SendText = SendPayload<IRecipient & IText>;
 
 export type SendReaction = (options: IRecipient & IReaction) => Promise<Response>;
 
