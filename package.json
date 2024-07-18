@@ -1,0 +1,38 @@
+{
+    "name": "whatsappjs",
+    "version": "0.1.0",
+    "type": "module",
+    "author": "Rohan Monnat <rohanmonnat@gmail.com>",
+    "description": "Whatsapp Cloud API client and Webhook",
+    "main": "dist/index.mjs",
+    "types": "./dist/index.d.ts",
+    "exports": {
+        "import": "./dist/index.js",
+        "require": "./dist/index.cjs"
+    },
+    "scripts": {
+        "build": "tsup",
+        "build:ci": "pnpm test && pnpm build",
+        "test": "vitest run",
+        "test:dev": "vitest dev"
+    },
+    "keywords": [
+        "meta",
+        "facebook",
+        "whatsapp",
+        "api"
+    ],
+    "devDependencies": {
+        "@babel/preset-env": "^7.24.8",
+        "@babel/preset-typescript": "^7.24.7",
+        "@types/node": "^20.14.10",
+        "dotenv": "^16.4.5",
+        "tsup": "^8.1.0",
+        "typescript": "^5.5.3",
+        "vitest": "^2.0.2"
+    },
+    "dependencies": {
+        "node-abort-controller": "^3.1.1",
+        "node-fetch": "^3.3.2"
+    }
+}
